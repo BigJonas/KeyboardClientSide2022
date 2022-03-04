@@ -2,6 +2,8 @@ package DesktopClient;
 
 import java.awt.*;
 import java.awt.event.*;
+import static java.awt.Font.*;
+import static java.awt.Label.*;
 
 import edu.wpi.first.networktables.*;
 
@@ -23,6 +25,7 @@ public class DesktopClient {
     public static NetworkTableEntry mouseEntries[];
 
     private static Frame mainFrame;
+    private static Label connectedLable;
     private static Window clientWindow;
 
     private static final Keyboard board = new Keyboard();
@@ -36,6 +39,11 @@ public class DesktopClient {
 
     private static void configClientWindow() {
 
+        connectedLable = new Label("");
+        connectedLable.setAlignment(CENTER);
+        connectedLable.setFont(new Font(SANS_SERIF, BOLD, 26));
+        updateConnectedLabel();
+
         mainFrame = new Frame("Input");
         clientWindow = new Window(mainFrame);
 
@@ -43,6 +51,8 @@ public class DesktopClient {
         mainFrame.setAlwaysOnTop(true);
         mainFrame.setVisible(true);
         mainFrame.setPreferredSize(FRAME_DIMENSION);
+
+        mainFrame.add(connectedLable);
         
         mainFrame.pack();
         clientWindow.pack();
@@ -59,7 +69,20 @@ public class DesktopClient {
 
             }
             
-        });  
+        });
+
+        inst.addConnectionListener(
+            event -> {
+
+                updateConnectedLabel();
+
+            }, 
+        
+        true
+        
+        );
+
+        
 
     }
 
@@ -170,6 +193,10 @@ public class DesktopClient {
 
     }
 
+    private static void updateConnectedLabel() {
+        connectedLable.setText(inst.isConnected() ? "CONNECTED" : "DISCONNECTED");
+        connectedLable.setBackground(inst.isConnected() ? Color.WHITE : Color.RED);
 
+    }
     
 }
