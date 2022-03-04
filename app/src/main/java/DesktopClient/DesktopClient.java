@@ -8,8 +8,11 @@ import edu.wpi.first.networktables.*;
 import static DesktopClient.Constants.Window.*;
 import static DesktopClient.Constants.Keyboard.*;
 import static DesktopClient.Constants.Mouse.*;
-import static DesktopClient.Keyboard.Keys.*;
-import static DesktopClient.Mouse.Buttons.*;
+import static DesktopClient.Input.Keyboard.Keys.*;
+import static DesktopClient.Input.Mouse.Buttons.*;
+
+import DesktopClient.Input.Keyboard;
+import DesktopClient.Input.Mouse;
 
 public class DesktopClient {
 

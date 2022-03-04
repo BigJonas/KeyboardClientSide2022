@@ -1,6 +1,6 @@
 package DesktopClient;
 
-import static DesktopClient.Keyboard.Keys.*;
+import static DesktopClient.Input.Keyboard.Keys.*;
 import static java.awt.event.KeyEvent.*;
 import java.awt.*;
 
