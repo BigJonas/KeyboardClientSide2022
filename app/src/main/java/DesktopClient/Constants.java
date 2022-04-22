@@ -12,7 +12,7 @@ public class Constants {
     public static final class Keyboard {
 
         public static final int FIRST_KEY_OFFSET = VK_BACK_SPACE;
-        public static final int KEY_AMOUNT = QU_;
+        public static final int KEY_AMOUNT = N9_;
 
     }
 
@@ -34,8 +34,8 @@ public class Constants {
 
         public static final int FRAME_X = 75;
         public static final int FRAME_Y = 75;
-        public static final int FRAME_WIDTH = 875;
-        public static final int FRAME_LENGTH = 500;
+        public static final int FRAME_WIDTH = 1280;
+        public static final int FRAME_LENGTH = 720;
 
         public static final Rectangle FRAME_RECTANGLE = 
             new Rectangle(
