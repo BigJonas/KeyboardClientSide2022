@@ -10,7 +10,6 @@ import javax.swing.plaf.DimensionUIResource;
 public class Constants {
 
     public static final class Keyboard {
-
         public static final int FIRST_KEY_OFFSET = VK_BACK_SPACE;
         public static final int KEY_AMOUNT = N9_;
 

@@ -8,7 +8,6 @@ import static DesktopClient.DesktopClient.*;
 
 import static java.awt.event.MouseEvent.*;
 import static DesktopClient.Constants.Keyboard.*;
-import static DesktopClient.Input.Keyboard.Keys.*;
 import static java.awt.event.KeyEvent.*;
 
 import static DesktopClient.Input.Mouse.Buttons.*;
@@ -73,8 +72,6 @@ public class Input {
             keysEntries[e.getKeyCode() - FIRST_KEY_OFFSET].setBoolean(true);
             System.out.println("Key pressed");
 
-            if(e.getKeyCode() == CM_ + FIRST_KEY_OFFSET) System.exit(0);
-
         }
 
         @Override
@@ -92,8 +89,8 @@ public class Input {
         public static final class Buttons {
 
             // Mouse Buttons
-            public static final int M1_ = BUTTON1;
-            public static final int M2_ = BUTTON2;
+            public static final int L1_ = BUTTON1;
+            public static final int R2_ = BUTTON2;
             public static final int M3_ = BUTTON3;
             public static final int MX_ = 4;
             public static final int MY_ = 5;

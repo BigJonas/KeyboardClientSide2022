@@ -9,7 +9,6 @@ import edu.wpi.first.networktables.*;
 
 import static DesktopClient.Constants.Window.*;
 import static DesktopClient.Constants.Keyboard.*;
-import static DesktopClient.Constants.Mouse.*;
 import static DesktopClient.Input.Keyboard.Keys.*;
 import static DesktopClient.Input.Mouse.Buttons.*;
 
@@ -50,6 +49,7 @@ public class DesktopClient {
         mainFrame.setAlwaysOnTop(true);
         mainFrame.setVisible(true);
         mainFrame.setPreferredSize(FRAME_DIMENSION);
+        mainFrame.setResizable(false);
 
         mainFrame.add(connectedLable);
         
@@ -128,8 +128,8 @@ public class DesktopClient {
         keysEntries[N8_] = keyTable.getEntry("8");
         keysEntries[N9_] = keyTable.getEntry("9");
 
-        mouseEntries[M1_] = mouseTable.getEntry("mouse 1");
-        mouseEntries[M2_] = mouseTable.getEntry("mouse 2");
+        mouseEntries[L1_] = mouseTable.getEntry("mouse 1");
+        mouseEntries[R2_] = mouseTable.getEntry("mouse 2");
         mouseEntries[M3_] = mouseTable.getEntry("mouse 3");
         mouseEntries[MX_] = mouseTable.getEntry("mouse x");
         mouseEntries[MY_] = mouseTable.getEntry("mouse y");
